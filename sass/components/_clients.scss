@@ -1,29 +1,31 @@
 .clients-section {
-  height: 372px;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .clients {
   @include flex-container(row, space-between, flex-start);
+  flex-wrap: wrap;
   gap: 30px;
-  margin-top: 50px;
+  margin-top: 30px;
+
 
   &__box {
-    width: 170px;
+    width: 210px;
     height: 92px;
     border-radius: $borders;
     border: 1px solid getColor(logos);
-    padding: 14px 32px;
+    @include flex-container(row, center, center);
   }
 
   &__svg {
-    padding-left: 30px;
-    padding-top: 10px;
+    width: 100px;
+    height: 52px;
+    padding-left: 25px;
   }
 
   &--svg {
-    padding-left: 15px;
+    padding-left: 7px;
   }
 
   &__logo {
@@ -39,5 +41,31 @@
   &__box:focus &__logo,
   &__box:active &__logo {
     fill: getColor(brand);
+  }
+}
+
+@media (min-width: 769px) {
+  .clients-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .clients {
+    @include flex-container(row, space-between, flex-start);
+    margin-top: 50px;
+
+    &__box {
+      width: 170px;
+      padding: 14px 32px;
+    }
+
+    &__svg {
+      padding-top: 3px;
+      padding-left: 27px;
+    }
+
+    &--svg {
+      padding-left: 7px;
+    }
   }
 }
