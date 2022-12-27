@@ -14,20 +14,39 @@
   }
 
   .container {
-    max-width: 1200px;
+    max-width: 450px;
     margin-right: auto;
     margin-left: auto;
   }
 
   .sub-title {
-    @include text(700, 36px, 42px);
+    @include text(700, 28px, 33px);
     text-align: center;
     margin-right: auto;
     margin-left: auto;
   }
 
   .logo {
-    @include text(700, 26px, 31px);
+    @include text(700, 24px, 28px);
     font-family: $secondary-font;
     color: getColor(brand);
+  }
+
+
+  @media (min-width: 481px) {
+
+  }
+
+  @media (min-width: 769px) {
+    .container {
+      max-width: 1200px;
+    }
+
+    .sub-title {
+      @include text(700, 36px, 42px);
+    }
+
+    .logo {
+      @include text(700, 26px, 31px);
+    }
   }

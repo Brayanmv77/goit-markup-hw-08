@@ -16,6 +16,7 @@
         flex-wrap: wrap;
         width: 281px;
         margin-right: 344px;
+        display: none;
     }
 
     &__link {
@@ -32,6 +33,7 @@
     &__contact-information {
         @include flex-container(row, flex-end, center);
         gap: 30px;
+        display: none;
     }
 
     &__contact {
@@ -46,5 +48,21 @@
         @include flex-container(row, flex-end, center);
         color: inherit;
         gap: 10px;
+    }
+}
+
+@media (min-width: 769px) {
+    .header {
+        &__nav {
+            @include flex-container(row, space-between, center);
+            flex-wrap: wrap;
+            width: 281px;
+            margin-right: 344px;
+        }
+        
+        &__contact-information {
+            @include flex-container(row, flex-end, center);
+            gap: 30px;
+        }
     }
 }
