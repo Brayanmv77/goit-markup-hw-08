@@ -1,13 +1,13 @@
 .team-section {
   background-color: getColor(background2);
-  height: 708px;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .team {
-  @include flex-container(row, space-between);
-  margin-top: 50px;
+  @include flex-container(column, space-between);
+  gap: 30px;
+  margin-top: 30px;
 
   &__card {
     @include flex-container(column, center, center);
@@ -15,6 +15,11 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+  }
+
+  &__image {
+    width: 450px;
+    height: 460px;
   }
 
   &__member {
@@ -50,5 +55,22 @@
     fill: #fff;
     background: getColor(brand);
     cursor: pointer;
+  }
+}
+
+@media (min-width: 769px) {
+  .team-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .team {
+    @include flex-container(row, space-between);
+    margin-top: 50px;
+
+    &__image {
+      width: 270px;
+      height: 260px;
+    }
   }
 }

@@ -10,21 +10,20 @@
 
     &__text {
         color: getColor(titles2);
-        @include text(900, 44px, 60px, 0.06em);
+        @include text(900, 26px, 42px, 0.06em);
         @include margin-auto;
         text-align: center;
         text-transform: uppercase;
-        width: 696px;
-        height: 120px;
-        margin-top: 200px;
+        width: 360px;
+        height: 84px;
+        margin-top: 118px;
         margin-bottom: 30px;
     }
 
     &__button {
         @include flex-container(row, center, center);
-        gap: 10px;
-        padding: 10px 32px;
-        margin-bottom: 200px;
+        padding: 10px 20px;
+        margin-bottom: 118px;
 
         color: getColor(titles2);
         background-color: getColor(brand);
@@ -35,3 +34,19 @@
         @include margin-auto;
     }
 }
+
+@media (min-width: 769px) {
+    .title {
+        &__text {
+            @include text(900, 44px, 60px, 0.06em);
+            width: 696px;
+            height: 120px;
+            margin-top: 200px;
+        }
+
+        &__button {
+            padding: 10px 32px;
+            margin-bottom: 200px;
+        }
+    }
+  }
