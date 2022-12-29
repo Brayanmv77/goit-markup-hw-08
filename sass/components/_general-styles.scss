@@ -31,12 +31,21 @@
     color: getColor(brand);
   }
 
+  @media (min-width: 768px) {
+    .container {
+      max-width: 738px;
+    }
 
-  @media (min-width: 481px) {
+    .sub-title {
+      @include text(700, 28px, 33px);
+    }
 
+    .logo {
+      @include text(700, 24px, 28px);
+    }
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 1200px) {
     .container {
       max-width: 1200px;
     }

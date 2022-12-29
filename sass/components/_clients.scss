@@ -45,6 +45,12 @@
 }
 
 @media (min-width: 769px) {
+  clients__box {
+    width: 226px;
+  }
+}
+
+@media (min-width: 1200px) {
   .clients-section {
     padding-top: 94px;
     padding-bottom: 94px;

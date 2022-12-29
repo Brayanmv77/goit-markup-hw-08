@@ -40,8 +40,16 @@
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
+    .title__button {
+        margin-bottom: 128px;
+    }
+}
+
+@media (min-width: 1200px) {
     .title {
+        background-size: auto;
+
         &__text {
             @include text(900, 44px, 60px, 0.06em);
             width: 696px;

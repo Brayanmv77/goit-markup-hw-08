@@ -69,6 +69,18 @@
 }
 
 @media (min-width: 769px) {
+  .team {
+    @include flex-container(row, space-between);
+    flex-wrap: wrap;
+
+    &__image {
+      width: 354px;
+      height: 374px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
   .team-section {
     padding-top: 94px;
     padding-bottom: 94px;
