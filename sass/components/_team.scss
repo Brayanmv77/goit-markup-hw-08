@@ -5,7 +5,7 @@
 }
 
 .team {
-  @include flex-container(column, space-between);
+  @include flex-container(column, center, center);
   gap: 30px;
   margin-top: 30px;
 
@@ -55,6 +55,16 @@
     fill: #fff;
     background: getColor(brand);
     cursor: pointer;
+  }
+}
+
+@media (max-width: 480px) {
+  .team__card {
+    width: 95%;
+  }
+  .team__image {
+    width: 100%;
+    height: auto;
   }
 }
 

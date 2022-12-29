@@ -4,7 +4,7 @@
 }
 
 .clients {
-  @include flex-container(row, space-between, flex-start);
+  @include flex-container(row, center, flex-start);
   flex-wrap: wrap;
   gap: 30px;
   margin-top: 30px;

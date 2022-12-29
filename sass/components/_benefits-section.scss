@@ -1,5 +1,5 @@
 .benefits {
-  @include flex-container(column, space-between, stretch);
+  @include flex-container(column, space-between, center);
   gap: 30px;
   margin-top: 60px;
   margin-bottom: 60px;
@@ -9,7 +9,7 @@
     background: getColor(background2);
     width: 450px;
     height: 120px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border-radius: $borders;
   }
 
@@ -27,20 +27,34 @@
 
   &__text {
     @include text(400, 14px, 24px, 0.03em);
+    width: 450px;
     color: #757575;
     text-align: left;
   }
 }
 
+@media (max-width: 480px) {
+  .benefits__icon {
+    width: 97%;
+    @include margin-auto;
+  }
+
+  .benefits__text {
+    width: 97%;
+    @include margin-auto;
+  }
+}
+
 @media (min-width: 769px) {
   .benefits {
-    flex-direction: row;
+    @include flex-container(column, space-between, stretch);
     flex-wrap: nowrap;
     margin-top: 82px;
     margin-bottom: 99px;
 
     &__icon {
       width: 270px;
+      margin-bottom: 30px;
     }
 
     &__title {
