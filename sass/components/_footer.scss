@@ -115,6 +115,10 @@
     @include flex-container(row, center, center);
     gap: 20px;
   }
+
+  &__button:hover {
+    background-color: rgba(24, 140, 232, 1);
+  }
 }
 
 @media (max-width: 460px) {

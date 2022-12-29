@@ -47,7 +47,7 @@
 
 @media (min-width: 769px) {
   .benefits {
-    @include flex-container(column, space-between, stretch);
+    @include flex-container(row, space-between, stretch);
     flex-wrap: nowrap;
     margin-top: 82px;
     margin-bottom: 99px;
