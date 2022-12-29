@@ -9,8 +9,7 @@
   .body {
     color: getColor(titles);
     font-family: $primary-font;
-    font-size: 14px;
-    font-weight: 400;
+    @include text;
   }
 
   .container {
