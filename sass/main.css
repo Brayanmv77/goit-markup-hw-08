@@ -437,7 +437,7 @@
     display: none;
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 1200px) {
   .modal {
     width: 528px;
     height: 598px;
@@ -1007,13 +1007,7 @@
   }
 }
 .button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
-  gap: 8px;
-  margin-top: 106px;
-  margin-bottom: 50px;
+  display: none;
 }
 .button__menu {
   background-color: rgb(245, 244, 250);
@@ -1024,8 +1018,7 @@
   line-height: 26px;
   letter-spacing: 0.03em;
   text-align: center;
-  width: 128px;
-  height: 38px;
+  padding: 6px 22px;
 }
 .button__menu:hover, .button__menu:focus, .button__menu:active {
   background-color: rgb(33, 150, 243);
@@ -1037,10 +1030,11 @@
 .products {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: stretch;
   gap: 30px;
   flex-wrap: wrap;
+  margin-top: 40px;
   margin-bottom: 82px;
 }
 
@@ -1051,18 +1045,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  max-width: 372px;
-  max-height: 404px;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 450px;
+  height: 404px;
 }
 .product:hover, .product:focus, .productactive {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
 }
-.product__image {
+.product__hidden {
   position: relative;
   overflow: hidden;
+}
+.product__image {
+  width: 100%;
+  height: auto;
 }
 .product__information {
   background-color: rgb(33, 150, 243);
@@ -1075,8 +1073,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 370px;
-  height: 294px;
+  width: 100%;
+  height: 310px;
   padding: 63px 24px;
   transform: translateY(102%);
   transition: transform 250ms ease;
@@ -1099,4 +1097,61 @@
   text-align: left;
   padding-left: 24px;
   margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 60px;
+    gap: 8px;
+  }
+  .product {
+    width: 354px;
+    height: 396px;
+  }
+  .product__image {
+    width: 354px;
+    height: 294px;
+  }
+  .product__information {
+    width: 354px;
+    height: 294px;
+  }
+  .product__basketball {
+    line-height: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 106px;
+    margin-bottom: 50px;
+  }
+  .products {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 0;
+  }
+  .product {
+    width: 370px;
+  }
+  .product__image {
+    width: 370px;
+    height: auto;
+  }
+  .product__information {
+    width: 370px;
+    height: 294px;
+  }
+  .product__basketball {
+    line-height: 36px;
+  }
 }/*# sourceMappingURL=main.css.map */

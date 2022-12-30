@@ -1,34 +1,31 @@
 .button {
-  @include flex-container(row, center);
-  gap: 8px;
-  margin-top: 106px;
-  margin-bottom: 50px;
-
-  &__menu {
-    background-color: getColor(background2);
-    border: getColor(background2);
-    border-radius: $borders;
-    @include text(500, 16px, 26px);
-    text-align: center;
-    width: 128px;
-    height: 38px;
+    display: none;
+  
+    &__menu {
+      background-color: getColor(background2);
+      border: getColor(background2);
+      border-radius: $borders;
+      @include text(500, 16px, 26px);
+      text-align: center;
+      padding: 6px 22px;
+    }
+  
+    &__menu:hover,
+    &__menu:focus,
+    &__menu:active {
+      background-color: getColor(brand);
+      color: #fff;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+    }
   }
-
-  &__menu:hover,
-  &__menu:focus,
-  &__menu:active {
-    background-color: getColor(brand);
-    color: #fff;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
-    cursor: pointer;
-  }
-}
 
 .products {
-  @include flex-container(row, space-between);
+  @include flex-container(row, center);
   gap: 30px;
   flex-wrap: wrap;
+  margin-top: 40px;
   margin-bottom: 82px;
 }
 
@@ -36,9 +33,9 @@
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(238, 238, 238);
   @include flex-container(column, center);
-  max-width: 372px;
-  max-height: 404px;
   object-fit: cover;
+  width: 450px;
+  height: 404px;
 
   &:hover,
   &:focus,
@@ -48,9 +45,14 @@
     cursor: pointer;
   }
 
-  &__image {
+  &__hidden {
     position: relative;
     overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
   }
 
   &__information {
@@ -60,8 +62,8 @@
     @include text(400, 18px, 28px);
     @include position-top-left(absolute);
 
-    width: 370px;
-    height: 294px;
+    width: 100%;
+    height: 310px;
     padding: 63px 24px;
 
     transform: translateY(102%);
@@ -85,5 +87,59 @@
     text-align: left;
     padding-left: 24px;
     margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .button{
+    @include flex-container(row, center);
+    margin-top: 60px;
+    gap: 8px;
+  }
+
+  .product {
+    width: 354px;
+    height: 396px;
+
+    &__image {
+      width: 354px;
+      height: 294px;
+    }
+    &__information {
+      width: 354px;
+      height: 294px;
+    }
+    &__basketball {
+      line-height: 20px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .button{
+    @include flex-container(row, center);
+    margin-top: 106px;
+    margin-bottom: 50px;
+  }
+
+  .products {
+    @include flex-container(row, space-between);
+    margin-top: 0;
+  }
+
+  .product {
+    width: 370px;
+
+    &__image {
+      width: 370px;
+      height: auto;
+    }
+    &__information {
+      width: 370px;
+      height: 294px;
+    }
+    &__basketball {
+      line-height: 36px;
+    }
   }
 }
