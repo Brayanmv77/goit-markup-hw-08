@@ -50,6 +50,11 @@
     border: none;
     background-color: inherit;
   }
+  &__mobile-menu:hover,
+  &__mobile-menu:focus,
+  &__mobile-menu:active {
+    fill: getColor(brand);
+  }
 }
 
 @media (max-width: 480px) {
