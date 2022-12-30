@@ -8,7 +8,7 @@
   background-color: #fff;
   z-index: 5;
 
-  transform: translateY(-100%);
+  transform: translateY(-200%);
   transition: transform 300ms ease-in-out;
 }
 
@@ -77,6 +77,12 @@
 
   @include text(500, 18px, 22px, 0.02em);
   color: getColor(brand);
+}
+
+@media (min-width: 380px) {
+    .hidden-menu__nav {
+        margin-bottom: 30%;
+    }
 }
 
 @media (min-width: 768px) {
