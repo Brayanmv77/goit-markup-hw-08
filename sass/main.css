@@ -190,7 +190,7 @@
 }
 .title {
   background-color: rgb(47, 48, 58);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.5), rgba(47, 48, 58, 0.5)), url("../images/title-image.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.5), rgba(47, 48, 58, 0.5)), url("../images/mobile-banner.jpg");
   background-position: 50% 50%;
   background-size: cover;
   border: 1px solid;
@@ -234,6 +234,9 @@
 }
 
 @media (min-width: 768px) {
+  .title {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.5), rgba(47, 48, 58, 0.5)), url("../images/tablet-banner.png");
+  }
   .title__button {
     margin-bottom: 128px;
   }
@@ -241,6 +244,7 @@
 @media (min-width: 1200px) {
   .title {
     background-size: auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.5), rgba(47, 48, 58, 0.5)), url("../images/desktop-banner.jpg");
   }
   .title__text {
     font-weight: 900;
@@ -841,6 +845,7 @@
   justify-content: flex-start;
   align-items: center;
   margin-top: 60px;
+  max-width: 450px;
 }
 .social-media__icons {
   display: flex;
@@ -871,6 +876,7 @@
   margin-top: 60px;
 }
 .subscribe__form {
+  max-width: 450px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

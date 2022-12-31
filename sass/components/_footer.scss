@@ -52,6 +52,7 @@
 .social-media {
   @include flex-container(column, flex-start, center);
   margin-top: 60px;
+  max-width: 450px;
 
   &__icons {
     @include flex-container(row, flex-start);
@@ -81,6 +82,7 @@
   margin-top: 60px;
 
   &__form {
+    max-width: 450px;
     @include flex-container(column, flex-start, center);
   }
 
